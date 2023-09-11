@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1694445686 source:f:\git_hub\csc134\m2t2_mcmillan\main.cpp
+	<iostream>
+	<iomanip>
+

@@ -26,22 +26,42 @@ int main()
 {
 
     cout << "Receipt Calculator" << endl;
-    // TODO: Ask the user the meal price
 
     // declare variables
-    double menu_price = 5.99;
+    double menu_price = 0;
     double tax_percent = 0.07; //Cumberland County
-    double tax_dollars = menu_price * tax_percent; // amount in dollars
-    double total_price = menu_price + tax_dollars; // price including tax
+    double item_price;
+    int num_items;
+    string item_name;
 
+
+    // 1 - Greet the customer
+    cout << "Welcome to CSC 134 Grill." << endl;
+
+    // 2 - Ask the user their order
+    cout << "What would you like today? " << endl;
+    cin >> item_name;
+
+    cout << "What's the price on that item? " << endl;
+    cin >> item_price;
+    // you can put " (s) " or not
+    cout << "How many " << item_name << "(s) do you want? " << endl;
+    cin >> num_items;
+
+    // 3 - Calculate the menu price
+    menu_price = num_items * item_price;
+
+    // 4 - Print the receipt
     // tax in $ is menu price times tax pct
     // then add the tax in $ to get the total $
+     double tax_dollars = menu_price * tax_percent; // amount in dollars
+     double total_price = menu_price + tax_dollars; // price including tax
 
     // we #include <iomanip> at the top and use this magic below
     // to use 2 decimal places
-
-    cout << fixed << setprecision(2);
+     cout << fixed << setprecision(2);
     // print the receipt
+     cout << "Order: " << num_items << " " << item_name << " (s)" << endl;
      cout << "Menu price: $" << menu_price << endl;
      cout << "Tax is :    $" << tax_dollars << endl;
      cout << "_________________________" << endl;

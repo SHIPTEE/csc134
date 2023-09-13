@@ -31,10 +31,18 @@ int main()
     volume = length * width * height;
 
     //Find the cost and price for that volume
+    cost = volume * COST_PER_CUBIC_FOOT;
+    charge = volume * CHARGE_PER_CUBIC_FOOT;
+
     //Find the profit
+    profit = charge - cost;
 
     //Output the answer
+    // Use 2 decimal places
     cout << "The crate is: " << volume << " cubic ft." << endl;
+    cout << "Cost to manufacture: $" << cost << endl;
+    cout << "Charge to customer:  $" << charge << endl;
+    cout << "Our profit:          $" << profit << endl;
 
     return 0;
 }
